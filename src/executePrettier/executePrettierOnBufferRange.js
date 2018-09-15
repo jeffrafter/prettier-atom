@@ -55,11 +55,8 @@ const buildPrettierTslintOptions = (editor: TextEditor, text: string) => ({
 const executePrettierEslint = (editor: TextEditor, text: string): string =>
   allowUnsafeNewFunction(() => prettierEslint(buildPrettierEslintOptions(editor, text)));
 
-const executePrettierTslint = (editor: TextEditor, text: string): string => {
-  const options = buildPrettierTslintOptions(editor, text);
-  options.filePath = (options.filePath || '').toString();
-  return allowUnsafeNewFunction(() => prettierTslint(options));
-};
+const executePrettierTslint = (editor: TextEditor, text: string): string =>
+  allowUnsafeNewFunction(() => prettierTslint(buildPrettierTslintOptions(editor, text)));
 
 const buildPrettierStylelintOptions = (editor: TextEditor, text: string) => ({
   text,

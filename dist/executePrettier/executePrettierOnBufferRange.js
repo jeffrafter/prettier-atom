@@ -12,7 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const _ = require('lodash/fp');
 const prettierEslint = require('prettier-eslint');
-const prettierTslint = require('prettier-tslint').fix;
+const prettierTslint = require('prettier-tslint').format;
 const prettierStylelint = require('prettier-stylelint');
 const { allowUnsafeNewFunction } = require('loophole');
 

@@ -9,7 +9,7 @@ jest.mock('./handleError');
 
 const prettier = require('prettier');
 const prettierEslint = require('prettier-eslint');
-const prettierTslint = require('prettier-tslint').fix;
+const prettierTslint = require('prettier-tslint').format;
 const prettierStylelint = require('prettier-stylelint');
 const {
   getPrettierEslintOptions,
